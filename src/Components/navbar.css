@@ -1,0 +1,76 @@
+*,*::after, *::before{
+margin: 0;
+box-sizing: border-box;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color:white;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 0px 25px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(112, 169, 255);
+    min-height: 8vh;
+}
+
+.brand {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav_items {
+display: flex;
+}
+
+
+
+.nav_toggler div {
+  width: 2.5rem;
+  height: 0.25rem;
+  margin: 0.4rem;
+  background-color: white;
+}
+
+.nav_toggler{
+    cursor:  pointer;
+    display: none;
+}
+
+@media screen and (max-width: 728px) {
+
+ .nav {
+    padding: 0px 0px 0px 25px ;
+    }
+
+ .nav_toggler{
+    display:block;
+ }
+
+ .nav_items{
+    display: none;
+ }
+    
+}
+
+
