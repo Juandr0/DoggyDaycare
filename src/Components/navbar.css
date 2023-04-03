@@ -13,6 +13,7 @@ a {
     color: rgb(255, 255, 255);
 }
 
+
 a:visited {
     color:white;
 }
@@ -20,24 +21,34 @@ a:visited {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     display: flex;
-    padding: 0px 25px;
+    padding: 0px 80px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background: rgb(112, 169, 255);
-    min-height: 8vh;
+    min-height: 5rem;
 }
 
-.brand {
-    text-transform: uppercase;
-    font-weight: bold;
-}
+.nav_container{
+    display:flex;
 
+}
 .nav_menu {
     display: flex;
-    gap: 3rem;
+    margin: 0px auto;
+    gap: 15vw;
 }
+
+.nav_brandname{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: 150px;
+    position: absolute;
+    left: 20px;
+    top: 28px;
+}
+
 
 .nav_items {
 display: flex;
@@ -46,9 +57,10 @@ display: flex;
 
 
 .nav_toggler div {
+  justify-self: flex-end;
   width: 2.5rem;
   height: 0.25rem;
-  margin: 0.4rem;
+  margin: 0.4rem ;
   background-color: white;
 }
 
@@ -59,18 +71,19 @@ display: flex;
 
 @media screen and (max-width: 728px) {
 
- .nav {
-    padding: 0px 0px 0px 25px ;
-    }
 
  .nav_toggler{
+    position: absolute;
     display:block;
+    right: 20px;
+    top: 20px;
+
  }
 
  .nav_items{
     display: none;
  }
-    
+
 }
 
 

@@ -5,6 +5,7 @@ import '../App'
 const Navbar = (props) => {
     return (
         <nav class='nav'>
+            <div class='nav_container'>
             <a href="/#" className='nav_brandname'>Doggy Daycare</a>
             <ul className='nav_menu'>
                 <li className="nav_items">
@@ -25,8 +26,9 @@ const Navbar = (props) => {
                 <div className="line2"></div>
                 <div className="line3"></div>
             </div>
-
+            </div>
         </nav>
+        
     );
 
 
