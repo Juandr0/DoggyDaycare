@@ -19,13 +19,12 @@ const navToggle = () => {
         return
     } 
         togglerState === 'nav_menu' 
-        ? setTogglerState('nav_menu navToggler_active') 
+        ? setTogglerState('nav_menu navToggler_active nav_transition') 
         : setTogglerState("nav_menu");
 
         toggleIcon === 'nav_toggler' 
         ? setToggleIcon('nav_toggler toggle' )
         : setToggleIcon('nav_toggler');
-    
 }
 
     const clickHandler = (screenName) => {
