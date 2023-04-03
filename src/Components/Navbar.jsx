@@ -13,18 +13,18 @@ const Navbar = (props) => {
 
 
     //Toggle animation
-const navToggle = () => {
-    if (window.innerWidth > 728) {
-        return
-    } 
-        togglerState === 'nav_menu'  || togglerState ==='nav_menu nav_transition'
-        ? setTogglerState('nav_menu navToggler_active nav_transition') 
-        : setTogglerState("nav_menu");
+    const navToggle = () => {
+        if (window.innerWidth > 728) {
+            return
+        }
+        togglerState === 'nav_menu' || togglerState === 'nav_menu nav_transition'
+            ? setTogglerState('nav_menu navToggler_active nav_transition')
+            : setTogglerState("nav_menu");
 
-        toggleIcon === 'nav_toggler' 
-        ? setToggleIcon('nav_toggler toggle' )
-        : setToggleIcon('nav_toggler');
-}
+        toggleIcon === 'nav_toggler'
+            ? setToggleIcon('nav_toggler toggle')
+            : setToggleIcon('nav_toggler');
+    }
 
     const clickHandler = (screenName) => {
         props.screenHandler(screenName);
