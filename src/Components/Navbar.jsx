@@ -8,6 +8,26 @@ import React, { useState } from "react";
 
 const Navbar = (props) => {
 
+    const [togglerState, setTogglerState] = useState("nav_menu");
+    const [toggleIcon, setToggleIcon] = useState("nav_toggler");
+
+
+    //Toggle animation
+
+const navToggle = () => {
+    if (window.innerWidth > 728) {
+        return
+    } 
+        togglerState === 'nav_menu' 
+        ? setTogglerState('nav_menu navToggler_active') 
+        : setTogglerState("nav_menu");
+
+        toggleIcon === 'nav_toggler' 
+        ? setToggleIcon('nav_toggler toggle' )
+        : setToggleIcon('nav_toggler');
+    
+}
+
     const clickHandler = (screenName) => {
         props.screenHandler(screenName);
     }
@@ -15,26 +35,26 @@ const Navbar = (props) => {
     return (
         <nav class='nav'>
             <div class='nav_container'>
-            <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare</a>
-            <ul className='nav_menu'>
-                <li className="nav_items">
-                    <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
-                </li>
+                <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare</a>
+                <ul className={togglerState}>
+                    <li className="nav_items">
+                        <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
+                    </li>
 
-                <li className="nav_items">
-                    <a href="/#" onClick={() => clickHandler('Catalogue')}>Our Dogs</a>
-                </li>
+                    <li className="nav_items">
+                        <a href="/#" onClick={() => clickHandler('Catalogue')}>Our Dogs</a>
+                    </li>
 
-                <li className="nav_items">
-                    <a href="/#" onClick={() => clickHandler('Information')}>About us</a>
-                </li>
-            </ul>
+                    <li className="nav_items">
+                        <a href="/#" onClick={() => clickHandler('Information')}>About us</a>
+                    </li>
+                </ul>
 
-            <div className="nav_toggler">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+                <div className={toggleIcon} onClick={navToggle}>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
             </div>
         </nav>
     );

@@ -62,6 +62,7 @@ display: flex;
   height: 0.25rem;
   margin: 0.4rem ;
   background-color: white;
+  transition: 0.3s ease-in;
 }
 
 .nav_toggler{
@@ -77,13 +78,44 @@ display: flex;
     display:block;
     right: 20px;
     top: 20px;
-
  }
 
- .nav_items{
-    display: none;
- }
+ .nav_menu {
+    position: fixed;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    right: 0;
+    width: 30%;
+    background: rgb(112, 169, 255);
+    flex-direction: column;
+    transform: translate(100%);
+    transition: 0.3s ease-in;
+    gap: 5vh;
+    
+}
+
+.nav_items {
+    padding: 10px;
 
 }
 
+/* Toggler activated */
+.navToggler_active {
+transform: translate(0%);
+}
 
+/* Toggler animation */
+.toggle .line1 {
+transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+     transform: rotate(45deg) translate(-8px,-7px); 
+}
+
+}

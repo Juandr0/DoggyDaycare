@@ -1,10 +1,10 @@
 
 const Welcome = (props) => {
 
-    return (
-        <h2> Welcome</h2>
-        
-        )
+return (
+    <h2> Welcome</h2>
+    
+    )
 }
 
 
