@@ -45,12 +45,12 @@ a:visited {
 
 .nav_items{
     padding-right: 30px;
-    font-size: x-large;
+    font-size: large;
 }
 
 .nav_menu {
     display: flex;
-    gap: 3vw;
+    gap: 5vw;
     transition: 0s;
 }
 
