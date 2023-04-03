@@ -45,11 +45,12 @@ a:visited {
 
 .nav_items{
     padding-right: 30px;
+    font-size: x-large;
 }
 
 .nav_menu {
     display: flex;
-    gap: 5vw;
+    gap: 3vw;
     transition: 0s;
 }
 
@@ -131,4 +132,19 @@ transform: rotate(-45deg) translate(-8px, 7px);
      transform: rotate(45deg) translate(-8px,-7px); 
 }
 
+}
+
+@media screen and (max-width: 390px) {
+    .pawImage {
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 370px) {
+    .nav_brandname{
+        font-size: x-large;
+        margin-top: 8px;
+    }
+
+  
 }

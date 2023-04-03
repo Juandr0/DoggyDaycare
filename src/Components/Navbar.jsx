@@ -4,6 +4,7 @@ import Welcome from '../ComponentScreens/Welcome';
 import Catalogue from '../ComponentScreens/Catalogue';
 import Information from '../ComponentScreens/Information';
 import React, { useState } from "react";
+import pawImage from '../paw.png'
 
 
 const Navbar = (props) => {
@@ -33,7 +34,8 @@ const Navbar = (props) => {
     return (
         <nav class='nav'>
             <div class='nav_container'>
-                <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare</a>
+                <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '25px', color: 'white' }} /></a>
+              
                 <ul className={togglerState}>
                     <li className="nav_items">
                         <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
