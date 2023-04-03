@@ -1,10 +1,10 @@
-
+import './welcome.css';
+import pawImage from '../paw.png';
 const Welcome = (props) => {
 
 return (
-    <div>
-    <h2> Welcome</h2>
-
+    <div className='test'>
+    <h2> Welcome to the best daycare in the world!</h2>
     </div>
   
     )
