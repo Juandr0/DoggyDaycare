@@ -1,23 +1,32 @@
 import './navbar.css';
 import '../App'
+import Welcome from '../ComponentScreens/Welcome';
+import Catalogue from '../ComponentScreens/Catalogue';
+import Information from '../ComponentScreens/Information';
+import React, { useState } from "react";
 
 
 const Navbar = (props) => {
+
+    const clickHandler = (screenName) => {
+        props.screenHandler(screenName);
+    }
+
     return (
         <nav class='nav'>
             <div class='nav_container'>
-            <a href="/#" className='nav_brandname'>Doggy Daycare</a>
+            <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare</a>
             <ul className='nav_menu'>
                 <li className="nav_items">
-                    <a href="/#">Home</a>
+                    <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
                 </li>
 
                 <li className="nav_items">
-                    <a href="/#"> Our Dogs</a>
+                    <a href="/#" onClick={() => clickHandler('Catalogue')}>Our Dogs</a>
                 </li>
 
                 <li className="nav_items">
-                    <a href="/#">About us</a>
+                    <a href="/#" onClick={() => clickHandler('Information')}>About us</a>
                 </li>
             </ul>
 
@@ -28,10 +37,7 @@ const Navbar = (props) => {
             </div>
             </div>
         </nav>
-        
     );
-
-
 }
 
 export default Navbar;

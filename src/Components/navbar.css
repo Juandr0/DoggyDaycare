@@ -43,7 +43,7 @@ a:visited {
 .nav_brandname{
     text-transform: uppercase;
     font-weight: bold;
-    padding-right: 150px;
+    margin-right: 150px;
     position: absolute;
     left: 20px;
     top: 28px;
