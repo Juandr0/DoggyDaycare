@@ -1,0 +1,32 @@
+
+.dogImage_container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.dogImage_wrapper{
+ 
+    margin: 0px auto;
+    border-radius: 25px;
+    color:white;
+    border: 5px solid rgb(200, 221, 252);
+    background: rgb(96, 158, 250);
+    width: 390px;
+    padding-bottom: 10px;
+    height: fit-content;
+    
+}
+
+.dogImage {
+    border-radius: 25px;
+    border: 4px double white;
+    width: 350px;
+    flex-grow: 1;
+}
+
+.dogCard {
+    
+}
