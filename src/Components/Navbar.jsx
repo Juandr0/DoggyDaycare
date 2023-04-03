@@ -13,12 +13,11 @@ const Navbar = (props) => {
 
 
     //Toggle animation
-
 const navToggle = () => {
     if (window.innerWidth > 728) {
         return
     } 
-        togglerState === 'nav_menu' 
+        togglerState === 'nav_menu'  || togglerState ==='nav_menu nav_transition'
         ? setTogglerState('nav_menu navToggler_active nav_transition') 
         : setTogglerState("nav_menu");
 
