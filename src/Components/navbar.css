@@ -38,6 +38,7 @@ a:visited {
     display: flex;
     margin: 0px auto;
     gap: 15vw;
+    transition: 0s;
 }
 
 .nav_brandname{
@@ -62,7 +63,7 @@ display: flex;
   height: 0.25rem;
   margin: 0.4rem ;
   background-color: white;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-out;
 }
 
 .nav_toggler{
@@ -90,14 +91,15 @@ display: flex;
     background: rgb(112, 169, 255);
     flex-direction: column;
     transform: translate(100%);
-    transition: 0.3s ease-in;
     gap: 5vh;
-    
+}
+
+.nav_transition {
+    transition: 0.3s ease-in-out;
 }
 
 .nav_items {
     padding: 10px;
-
 }
 
 /* Toggler activated */
