@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './catalogue.css'
-const apiUrl = 'https://api.jsonbin.io/v3/b/6422b9c8c0e7653a0597d126'
+import { Link } from "react-router-dom";
 
+const apiUrl = 'https://api.jsonbin.io/v3/b/6422b9c8c0e7653a0597d126';
 const Catalogue = (props) => {
     const [dogs, setDogs] = useState([]);
 
@@ -30,17 +31,15 @@ const Catalogue = (props) => {
                 {dogs.map((dog, index) => (
                     <div key={index} className='dogImage_wrapper dogCard' >
                         <p>{dog.name} the {dog.breed} {isDogPresent(dog)}</p>
-                            <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name} onClick={() => {cardClickHandler(dog)}} />
+                        <Link className='dogImage dogCard' to="/Dogs/Info">
+                            <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name}/>
+                        </Link>
                     </div>
                 ))}
             </div>
         </div>
     );
 };
-
-const cardClickHandler = (props) => {
-    console.log('klick ' + props.name)
-} 
 
 const isDogPresentClass = (prop) => {
     let newClassNames = ""
