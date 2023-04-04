@@ -32,8 +32,8 @@ const Navbar = (props) => {
     }
 
     return (
-        <nav class='nav'>
-            <div class='nav_container'>
+        <nav className='nav'>
+            <div className='nav_container'>
                 <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} /></a>
               
                 <ul className={togglerState}>
