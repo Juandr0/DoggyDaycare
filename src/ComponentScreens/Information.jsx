@@ -1,14 +1,21 @@
+import { useParams } from "react-router";
+import { useState, useEffect } from "react";
 
+function Information(props) {
+   
+    
+    const {id} = useParams();
 
-const Information = (props) => {
+    console.log( props.dogs);
+    console.log(id);
+    console.log(props.dogs[id].name);
 
- 
+   
     return (
-        <h2> Information</h2>
-        
-        )
+        <div>
+            <h1>{props.dogs[id].name}</h1>
+        </div>
+    );
 }
-
-
 
 export default Information;
