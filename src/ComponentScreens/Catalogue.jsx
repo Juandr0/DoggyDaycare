@@ -28,10 +28,10 @@ const Catalogue = (props) => {
         <div className='dogCard_container'>
             <div className='dogImage_container'>
                 {dogs.map((dog, index) => (
-                    <div key={index} className='dogImage_wrapper dogCard' onClick={() => {cardClickHandler(dog)}}>
+                    <div key={index} className='dogImage_wrapper dogCard' >
                         <p>{dog.name} the {dog.breed}</p>
-                            <img className='dogImage dogCard' src={dog.img} alt={dog.name} />
-                            
+                            <img className={'dogImage dogCard ' + isDogPresent(dog)} src={dog.img} alt={dog.name} onClick={() => {cardClickHandler(dog)}} />
+                        <p></p>
                     </div>
                 ))}
             </div>
@@ -44,11 +44,14 @@ const cardClickHandler = (props) => {
 } 
 
 const isDogPresent = (prop) => {
+    let newClassNames = ""
     if (prop.present) {
-        return "Yes" 
+        newClassNames = 'isPresent'
     } else {
-        return "No"
+        newClassNames =  'isNotPresent'
     }
+
+    return newClassNames
 }
 
 
