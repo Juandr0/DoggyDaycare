@@ -1,11 +1,8 @@
 import './navbar.css';
 import '../App'
-import Welcome from '../ComponentScreens/Welcome';
-import Catalogue from '../ComponentScreens/Catalogue';
-import Information from '../ComponentScreens/Information';
 import React, { useState } from "react";
-import pawImage from '../paw.png'
-import { Link } from "react-router-dom"
+import pawImage from '../paw.png';
+import { Link } from "react-router-dom";
 
 
 const Navbar = (props) => {
