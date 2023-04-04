@@ -12,7 +12,6 @@ const Apifetch = () => {
             localStorage.setItem('dogs', JSON.stringify(data.record));
         };
 
-        //lägg till LocalStoarge check ifall datan redan finns, isf fetcha inte ny.
         const cachedDogs = localStorage.getItem('dogs');
         if (cachedDogs) {
             console.log('Dogs are cached!')
@@ -20,6 +19,7 @@ const Apifetch = () => {
         } else {
             console.log('No doggos cached, Fetching!');
             fetchData();
+            
         }
     }, []);
 
