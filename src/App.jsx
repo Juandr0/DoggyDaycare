@@ -7,45 +7,40 @@ import Catalogue from './ComponentScreens/Catalogue';
 import Information from './ComponentScreens/Information';
 import Navbar from './Components/Navbar';
 
-
-
 function App() {
-    
-    const WELCOME = 'Welcome', CATALOGUE = 'Catalogue', INFORMATION = 'Information';
-    const [currentScreen, setCurrentScreen] = useState(WELCOME);
+    const [currentScreen, setCurrentScreen] = useState('Welcome');
 
     let displayedComponent = null;
+
+    const screenHandler = (screenName) => {
+        setCurrentScreen(screenName);
+    }
     
     switch (currentScreen) {
-        case WELCOME:
-            displayedComponent = <Welcome {...() => setCurrentScreen(WELCOME) }/>;
+        case 'Welcome':
+            displayedComponent = <Welcome screenHandler={screenHandler}/>;
             break;
       
-        case CATALOGUE:
-            displayedComponent = <Catalogue  {...() => setCurrentScreen(CATALOGUE)} />;
+        case 'Catalogue':
+            displayedComponent = <Catalogue screenHandler={screenHandler}/>;
             break;
 
-        case INFORMATION:
-            displayedComponent = <Information{...() => setCurrentScreen(INFORMATION)} />;
+        case 'Information':
+            displayedComponent = <Information screenHandler={screenHandler}/>;
             break;
 
         default: 
-            displayedComponent = <Welcome{...() => setCurrentScreen(INFORMATION)} />;
+            displayedComponent = <Welcome screenHandler={screenHandler}/>;
             break;
-      }
+    }
 
- return(
-  
-  <div>
-
-    {displayedComponent}
-  </div>
-
-
-
- )
+    return(
+        <div>
+            <Navbar screenHandler={screenHandler}/>
+            {displayedComponent}
+        </div>
+    )
 }
 
+export default App;
 
-
-export default App

@@ -1,0 +1,150 @@
+*,*::after, *::before{
+margin: 0;
+box-sizing: border-box;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+a:visited {
+    color:white;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(112, 169, 255);
+
+
+    min-height: 5rem;
+}
+
+.nav_container{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: end;
+    background: rgb(112, 169, 255);
+    min-height: 5rem;
+    align-self: center;
+    max-width: 1080px;
+    margin: 0px auto;
+}
+
+.nav_items{
+    padding-right: 30px;
+    font-size: large;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 5vw;
+    transition: 0s;
+}
+
+.nav_brandname{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    font-size: xx-large;
+    left: 20px;
+    top: 14px;
+}
+
+
+.nav_toggler div {
+  justify-self: flex-end;
+  width: 2.5rem;
+  height: 0.25rem;
+  margin: 0.4rem ;
+  background-color: white;
+  transition: 0.3s ease-out;
+}
+
+.nav_toggler{
+    cursor:  pointer;
+    display: none;
+}
+
+@media screen and (max-width: 728px) {
+
+
+ .nav_toggler{
+    position: absolute;
+    display:block;
+    right: 20px;
+    top: 20px;
+ }
+
+ .nav_menu {
+    position: fixed;
+    flex-direction: column;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    right: 0;
+    width: 30%;
+    background: rgb(112, 169, 255);
+    flex-direction: column;
+    transform: translate(100%);
+    gap: 3vh;
+}
+
+.nav_container {
+    display: inline;
+}
+
+.nav_transition {
+    transition: 0.3s ease-in-out;
+}
+
+.nav_items {
+    padding: 10px;
+    margin-right: 30px;
+}
+
+/* Toggler activated */
+.navToggler_active {
+transform: translate(0%);
+}
+
+/* Toggler animation */
+.toggle .line1 {
+transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+     transform: rotate(45deg) translate(-8px,-7px); 
+}
+
+}
+
+@media screen and (max-width: 390px) {
+    .pawImage {
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 370px) {
+    .nav_brandname{
+        font-size: x-large;
+        margin-top: 8px;
+    }
+
+  
+}
