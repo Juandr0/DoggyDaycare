@@ -26,13 +26,12 @@ const Catalogue = (props) => {
 
     return (
         <div className='dogCard_container'>
-            <h2>Our stars!</h2>
             <div className='dogImage_container'>
                 {dogs.map((dog, index) => (
                     <div key={index} className='dogImage_wrapper dogCard' onClick={() => {cardClickHandler(dog)}}>
-                        <h3>{dog.name} the {dog.breed}</h3>
+                        <p>{dog.name} the {dog.breed}</p>
                             <img className='dogImage dogCard' src={dog.img} alt={dog.name} />
-                            <p>Is currently at the daycare? {isDogPresent(dog)}</p>
+                            
                     </div>
                 ))}
             </div>
