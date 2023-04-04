@@ -5,6 +5,7 @@ import Catalogue from '../ComponentScreens/Catalogue';
 import Information from '../ComponentScreens/Information';
 import React, { useState } from "react";
 import pawImage from '../paw.png'
+import { Link } from "react-router-dom"
 
 
 const Navbar = (props) => {
@@ -27,26 +28,24 @@ const Navbar = (props) => {
             : setToggleIcon('nav_toggler');
     }
 
-    const clickHandler = (screenName) => {
-        props.screenHandler(screenName);
-    }
+
 
     return (
         <nav className='nav'>
             <div className='nav_container'>
-                <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} /></a>
+                <a href="/#" className='nav_brandname' >Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} /></a>
               
                 <ul className={togglerState}>
                     <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
+                        <Link to="/">Home</Link>
                     </li>
 
                     <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Catalogue')}>Our Dogs</a>
+                        <Link to="/dogs">Our dogs</Link>
                     </li>
 
                     <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Information')}>About us</a>
+                        <Link to="/Information">About us</Link>
                     </li>
                 </ul>
 
