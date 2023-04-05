@@ -8,7 +8,7 @@ const Apifetch = () => {
         const fetchData = async () => {
             const response = await fetch(apiUrl);
             const data = await response.json();
-            setDogs(data);
+            setDogs(data.record);
             localStorage.setItem('dogs', JSON.stringify(data.record));
         };
 
@@ -16,18 +16,13 @@ const Apifetch = () => {
         if (cachedDogs) {
             console.log('Dogs are cached!')
             setDogs(JSON.parse(cachedDogs));
-            
         } else {
             console.log('No doggos cached, Fetching!');
             fetchData();
         }
     }, []);
 
-
-    return(
-        dogs
-    )
+    return dogs;
 }
-
 
 export default Apifetch;

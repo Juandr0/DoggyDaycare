@@ -14,7 +14,6 @@
 
 /* Style each item in the grid */
 .dogCard {
-  
   color:rgb(0, 0, 0);
   border: 2px solid rgba(61, 163, 231, 0.021);
   display: flex;

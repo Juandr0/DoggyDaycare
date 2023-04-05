@@ -6,7 +6,6 @@ box-sizing: border-box;
 }
 
 body {
-    color:white;
     font-family: 'Roboto';
 }
 
@@ -49,6 +48,9 @@ a:visited {
     margin: 0px auto;
 }
 
+.nav_items span {
+    color:white;
+}
 .nav_items{
     padding-right: 30px;
     font-size: large;
@@ -61,7 +63,7 @@ a:visited {
 }
 
 .nav_brandname{
- 
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     position: absolute;
