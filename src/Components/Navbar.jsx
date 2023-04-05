@@ -11,7 +11,7 @@ const Navbar = (props) => {
     const [toggleIcon, setToggleIcon] = useState("nav_toggler");
 
 
-    //Toggle animation
+    //Toggle nav-animation
     const navToggle = () => {
         if (window.innerWidth > 728) {
             return
@@ -27,6 +27,7 @@ const Navbar = (props) => {
 
 
 
+
     return (
         <nav className='nav'>
             <div className='nav_container'>
@@ -34,15 +35,11 @@ const Navbar = (props) => {
               
                 <ul className={togglerState}>
                     <li className="nav_items">
-                        <Link to="/">Home</Link>
+                        <Link to="/" >Home</Link>
                     </li>
 
                     <li className="nav_items">
-                        <Link to="/dogs">Our dogs</Link>
-                    </li>
-
-                    <li className="nav_items">
-                        <Link to="/Information">About us</Link>
+                        <Link to="/dogs">The Crew</Link>
                     </li>
                 </ul>
 

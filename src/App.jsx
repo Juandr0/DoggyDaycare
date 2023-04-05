@@ -17,11 +17,11 @@ function App() {
                     <Welcome />
                 } />
                 <Route path="/Dogs" element={
-                    <Catalogue/>
+                    <Catalogue />
                 } />
-               <Route path="/Dogs/Info/:id" element=
-               {<Information/>} />
-            
+                <Route path="/Dogs/Info/:id" element=
+                    {<Information />} />
+
             </Routes>
         </div>
     )

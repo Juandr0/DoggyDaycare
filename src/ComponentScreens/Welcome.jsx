@@ -1,10 +1,12 @@
 import './welcome.css';
 import pawImage from '../paw.png';
+import Background from '../assets/Background.jpg';
 const Welcome = (props) => {
-
+    const imageUrl = 'https://unsplash.com/photos/DZ3ixpNPt7c';
 return (
-    <div className='test'>
-    <h2> Welcome to the best daycare in the world!</h2>
+    <div className='welcomeBody'> 
+        <h2 className='row1'>Welcome to the Doggy Daycare platform </h2>
+        <h2 className='row2'>A quick and fun way to keep track of the daycare dogs!</h2>
     </div>
   
     )
