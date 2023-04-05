@@ -31,15 +31,24 @@ const Navbar = (props) => {
     return (
         <nav className='nav'>
             <div className='nav_container'>
-                <a href="/#" className='nav_brandname' >Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} /></a>
-              
+
+                <li>
+                    <Link className='nav_brandname' to="/">
+                        <span>Doggy Daycare</span>
+                        <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} />
+                    </Link>
+                </li>
+
+
+
+
                 <ul className={togglerState}>
                     <li className="nav_items">
-                        <Link to="/" onClick={() => {setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>Home</Link>
+                        <Link to="/" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>Home</Link>
                     </li>
 
                     <li className="nav_items">
-                        <Link to="/dogs" onClick={() => {setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>The Crew</Link>
+                        <Link to="/dogs" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>The Crew</Link>
                     </li>
                 </ul>
 
