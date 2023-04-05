@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Apifetch from "../Components/Apifetch";
+import './CSS/information.css'
 
 function Information() {
     const { id } = useParams();
