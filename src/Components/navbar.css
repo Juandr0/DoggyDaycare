@@ -119,8 +119,9 @@ a:visited {
 }
 
 .nav_items {
-    padding: 10px;
-    margin-right: 30px;
+   white-space: nowrap ;
+   align-self: center;
+   margin-right: 15px;
 }
 
 /* Toggler activated */
@@ -143,17 +144,26 @@ transform: rotate(-45deg) translate(-8px, 7px);
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 474px) {
     .pawImage {
         display: none;
     } 
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 436px) {
     .nav_brandname{
         font-size: x-large;
         margin-top: 8px;
     }
 
-  
+    .nav_items {
+        align-self: center;
+        margin-right: 10px;
+     }
+
+    
+}
+
+@media screen and (max-width: 380px) {
+    
 }
