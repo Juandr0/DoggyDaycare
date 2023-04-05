@@ -1,10 +1,8 @@
 import './navbar.css';
 import '../App'
-import Welcome from '../ComponentScreens/Welcome';
-import Catalogue from '../ComponentScreens/Catalogue';
-import Information from '../ComponentScreens/Information';
 import React, { useState } from "react";
-import pawImage from '../paw.png'
+import pawImage from '../paw.png';
+import { Link } from "react-router-dom";
 
 
 const Navbar = (props) => {
@@ -13,7 +11,7 @@ const Navbar = (props) => {
     const [toggleIcon, setToggleIcon] = useState("nav_toggler");
 
 
-    //Toggle animation
+    //Toggle nav-animation
     const navToggle = () => {
         if (window.innerWidth > 728) {
             return
@@ -27,26 +25,36 @@ const Navbar = (props) => {
             : setToggleIcon('nav_toggler');
     }
 
-    const clickHandler = (screenName) => {
-        props.screenHandler(screenName);
-    }
+
+
 
     return (
         <nav className='nav'>
             <div className='nav_container'>
-                <a href="/#" className='nav_brandname' onClick={() => clickHandler('Welcome')}>Doggy Daycare  <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} /></a>
-              
+
+                <li>
+                    <Link className='nav_brandname' to="/">
+                        <span>Doggy Daycare</span>
+                        <img src={pawImage} className='pawImage' alt="paw image" style={{ width: '23px', color: 'white' }} />
+                    </Link>
+                </li>
+
+
+
+
                 <ul className={togglerState}>
                     <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Welcome')}>Home</a>
+                    
+                        <Link to="/" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>
+                        <span>Home</span>
+                        </Link>
                     </li>
 
                     <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Catalogue')}>Our Dogs</a>
-                    </li>
 
-                    <li className="nav_items">
-                        <a href="/#" onClick={() => clickHandler('Information')}>About us</a>
+                        <Link to="/dogs" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>
+                        <span>The crew</span>
+                        </Link>
                     </li>
                 </ul>
 

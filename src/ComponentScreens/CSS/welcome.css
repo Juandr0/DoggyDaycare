@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.welcomeBody {
+    background-image: url('../../assets/Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* Use fixed instead of absolute */
+    top: 80px;
+    left: 0;
+    background-position: 50% 50%;
+    z-index: 0;
+}
+
+h2 {
+    color: black;
+    font-family: 'Lobster', cursive;
+    margin-top: 40px;
+    letter-spacing: 0.1em;
+}
+
+
+.row1 {
+    position: relative;
+    left: -15%;
+    padding-left: 15%;
+    animation: row1 2s ease-out;
+}
+
+.row2 {
+    position: relative;
+    padding-right: 15%;
+    right: -15%;
+    animation: row2 2s ease-out forwards;
+
+}
+
+
+@keyframes row1 {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: -20%;
+    }
+
+    100% {
+        left: -15%;
+    }
+}
+
+@keyframes row2 {
+
+    0% {
+        right: -100%;
+        display: inline;
+    }
+
+    20% {
+        right: -20%;
+    }
+
+
+    100% {
+        right: -15%;
+    }
+
+}
