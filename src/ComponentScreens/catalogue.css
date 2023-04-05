@@ -1,8 +1,7 @@
 body {
-  background: linear-gradient(to bottom, #F3F3F3, #E0E5FC);
-
+  background: #DCEFFB;
   background-size: 400% 400%;
-  animation: gradientAnimation 50s both infinite;
+  animation: gradientAnimation s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -17,11 +16,14 @@ body {
   }
 }
 
+
+
 .dogCard_container {
   max-width: 900px;
 }
 
 .dogImage_container {
+
   margin-top: 80px;
   display: grid;
   grid-gap: 20px;
@@ -30,12 +32,14 @@ body {
 }
 
 .dogImage_wrapper {
+  
   flex: 1;
   margin: 0;
 }
 
 /* Style each item in the grid */
 .dogCard {
+  
   color:rgb(0, 0, 0);
   border: 2px solid rgba(61, 163, 231, 0.021);
   display: flex;
@@ -48,6 +52,7 @@ body {
 
 /* Style the image within the container */
 .dogImage {
+  
   cursor:  pointer;
   align-self: center;
   width: 100%;
@@ -77,3 +82,13 @@ body {
 
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+ 
+  }
+  to {
+    opacity: 1;
+    
+  }
+}
