@@ -1,4 +1,4 @@
-import './welcome.css';
+import './CSS/welcome.css';
 import pawImage from '../paw.png';
 import Background from '../assets/Background.jpg';
 const Welcome = (props) => {

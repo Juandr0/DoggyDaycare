@@ -35,11 +35,11 @@ const Navbar = (props) => {
               
                 <ul className={togglerState}>
                     <li className="nav_items">
-                        <Link to="/" >Home</Link>
+                        <Link to="/" onClick={() => {setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>Home</Link>
                     </li>
 
                     <li className="nav_items">
-                        <Link to="/dogs">The Crew</Link>
+                        <Link to="/dogs" onClick={() => {setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>The Crew</Link>
                     </li>
                 </ul>
 

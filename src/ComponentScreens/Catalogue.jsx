@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './catalogue.css'
+import './CSS/catalogue.css'
 import { Link } from "react-router-dom";
 import Apifetch from '../Components/Apifetch';
 

@@ -16,10 +16,10 @@ const Apifetch = () => {
         if (cachedDogs) {
             console.log('Dogs are cached!')
             setDogs(JSON.parse(cachedDogs));
+            
         } else {
             console.log('No doggos cached, Fetching!');
             fetchData();
-            
         }
     }, []);
 
