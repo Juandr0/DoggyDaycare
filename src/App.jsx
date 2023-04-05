@@ -16,10 +16,10 @@ function App() {
                 <Route path="/" element={
                     <Welcome />
                 } />
-                <Route path="/Dogs" element={
+                <Route path="/dogs" element={
                     <Catalogue />
                 } />
-                <Route path="/Dogs/Info/:id" element=
+                <Route path="/dogs/:id" element=
                     {<Information />} />
 
             </Routes>

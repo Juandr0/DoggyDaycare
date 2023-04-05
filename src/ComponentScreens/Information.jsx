@@ -42,23 +42,24 @@ function Information() {
     return (
         <div>
             <div className={`singleDogCard ${dogAtDaycare}`}>
-                <h1>{dogs[id].name}</h1>  <br />
+                <h1>{dogs[id].name}</h1>
+                <li> {dogAtDaycare === 'atDaycare' ? `Is currently at the daycare` : `Is not at the daycare`}</li>  <br />
                 <li> {dogs[id].age} {ageCheck(dogs[id].age)} old {dogs[id].sex} {dogs[id].breed}</li>
 
                 <img src={dogs[id].img} />
                 <ul>
                     <li> Chipnumber: {dogs[id].chipNumber}</li>
+                    
                 </ul>
                 <div className='singleDogCard_ownerInfo'>
                     <h2>Owner</h2>
                     <ul className="">
                         <li>{dogs[id].owner.name} {dogs[id].owner.lastName}</li>
-                        <li>{dogs[id].owner.phoneNumber}</li>
-                        <li></li>
+                        <li>{dogs[id].owner.phoneNumber}</li> <br />
                     </ul>
                 </div>
             </div>
-            <p> {dogAtDaycare === 'atDaycare' ? `${dogs[id].name} is currently at the daycare` : `${dogs[id].name} is not at the daycare`}</p>
+          
         </div>
     );
 }

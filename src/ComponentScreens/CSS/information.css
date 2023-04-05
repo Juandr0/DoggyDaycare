@@ -37,18 +37,23 @@
 }
 
 .atDaycare {
+  color: black;
   background: linear-gradient(to right, rgba(0, 255, 0, 0.9), rgba(76, 217, 100, 0.8), rgba(98, 216, 76, 0.7), rgba(138, 216, 63, 0.6));
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
 }
 
-.notAtDaycare {
+.notAtDaycare{
+  color: white;
   background: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(217, 76, 76, 0.8), rgba(216, 98, 98, 0.7), rgba(216, 138, 138, 0.6));
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
-
 }
 
+.singleDogCard hr {
+ width: 200%;
+
+}
 
 @keyframes gradientBackground {
   0% {
