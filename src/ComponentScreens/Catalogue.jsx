@@ -5,26 +5,26 @@ import Apifetch from '../Components/Apifetch';
 
 
 const Catalogue = () => {
-        const dogs = Apifetch();
+    const dogs = Apifetch();
 
-        return (
-            <div className='dogCard_container'>
-                <div className='dogImage_container'>
-                    {dogs.map((dog, index) => (
-                        <div key={index} className='dogImage_wrapper dogCard' >
-                            <p>{dog.name} the {dog.breed} {isDogPresent(dog)}</p>
-                            <Link className='dogImage dogCard' to={`/Dogs/Info/${index}`}>
-                                <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name} />
-                            </Link>
-                        </div>
-                    ))}
-                </div>
+    return (
+        <div className='dogCard_firstContainer'>
+            <div className='dogImage_container'>
+                {dogs.map((dog, index) => (
+                    <div key={index} className='dogImage_wrapper dogCard' >
+                        <p>{dog.name} the {dog.breed}</p>
+                        <Link className='dogImage dogCard' to={`${index}`}>
+                            <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name} />
+                        </Link>
+                    </div>
+                ))}
             </div>
-        );
-    
- 
-          
-   
+        </div>
+    );
+
+
+
+
 
 
 };
@@ -38,16 +38,6 @@ const isDogPresentClass = (prop) => {
     }
 
     return newClassNames
-}
-
-
-const isDogPresent = (prop) => {
-    let isPresent = ""
-    if (prop.present) {
-        isPresent = 'is present'
-    }
-
-    return isPresent
 }
 
 
