@@ -16,22 +16,31 @@ function Information() {
     dogs = JSON.parse(dogs);
     console.log(dogs);
 
+    const ageCheck = (prop) => {
+        if (prop > 1) {
+            return 'years'
+        } else return 'year'
+    }
+
 
     return (
-        <div>
+        <div className="singleDogCard">
             <h1>{dogs[id].name}</h1>  <br />
+            <li> {dogs[id].age} {ageCheck(dogs[id].age)} old {dogs[id].sex} {dogs[id].breed}</li>
             <img src={dogs[id].img} />
             <ul>
-                <li> {dogs[id].age} years old {dogs[id].sex} {dogs[id].breed}</li>
+             
                 <li> Chipnumber: {dogs[id].chipNumber}</li>
             </ul>
-
-            <h2>Owner</h2>
-            <ul>
+        <div className = 'singleDogCard_ownerInfo'>
+        <h2>Owner</h2>
+            <ul className="">
                 <li>{dogs[id].owner.name} {dogs[id].owner.lastName}</li>
-                <li>Phone number: {dogs[id].owner.phoneNumber}</li>
+                <li>{dogs[id].owner.phoneNumber}</li>
                 <li></li>
             </ul>
+        </div>
+           
         </div>
     );
 }
