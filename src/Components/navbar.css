@@ -147,6 +147,8 @@ transform: rotate(-45deg) translate(-8px, 7px);
     .pawImage {
         display: none;
     } 
+
+    
 }
 
 @media screen and (max-width: 436px) {
@@ -154,21 +156,10 @@ transform: rotate(-45deg) translate(-8px, 7px);
         font-size: x-large;
         margin-top: 9px;
     }
-
-    .nav_items {
-        text-align: left;
-        align-self: center;
-        margin: 0px 20px 0px 400px;
-    }
-
-    .nav_items {
-        align-self: center;
-        margin-right: 10px;
-     }
-
-    
 }
 
-@media screen and (max-width: 380px) {
-    
+@media screen and (max-width: 340px) {
+    .nav_brandname{
+        font-size: large;
+    }
 }

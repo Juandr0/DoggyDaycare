@@ -44,7 +44,6 @@ const Navbar = (props) => {
 
                 <ul className={togglerState}>
                     <li className="nav_items">
-                    
                         <Link to="/" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>
                         <span>Home</span>
                         </Link>
