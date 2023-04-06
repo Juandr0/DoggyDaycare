@@ -52,8 +52,7 @@ function Information() {
 
                 <img src={dogs[id].img} />
                 <ul>
-                    <li> Chipnumber: {dogs[id].chipNumber}</li>
-
+                    <li id="chipNumber"> Chipnumber: {dogs[id].chipNumber}</li>
                 </ul>
                 <div className='singleDogCard_ownerInfo'>
                     <ul>
