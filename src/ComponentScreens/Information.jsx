@@ -56,8 +56,8 @@ function Information() {
 
                 </ul>
                 <div className='singleDogCard_ownerInfo'>
-                    <h2>Owner</h2>
-                    <ul className="">
+                    <ul>
+                        <h2>Owner</h2>
                         <li>{dogs[id].owner.name} {dogs[id].owner.lastName}</li>
                         <li>{dogs[id].owner.phoneNumber}</li> <br />
                     </ul>
