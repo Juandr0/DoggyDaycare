@@ -1,7 +1,7 @@
 import './navbar.css';
 import '../App'
 import React, { useState } from "react";
-import pawImage from '../paw.png';
+import pawImage from '../assets/paw.png'
 import { Link } from "react-router-dom";
 
 
@@ -44,7 +44,6 @@ const Navbar = (props) => {
 
                 <ul className={togglerState}>
                     <li className="nav_items">
-                    
                         <Link to="/" onClick={() => { setToggleIcon('nav_toggler'); setTogglerState("nav_menu"); }}>
                         <span>Home</span>
                         </Link>

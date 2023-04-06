@@ -6,8 +6,7 @@ import Apifetch from '../Components/Apifetch';
 
 const Catalogue = () => {
 
-    const [loading, setLoading] = useState(false);
-
+    const [loading, setLoading] = useState(true);
     const dogs = Apifetch();
     
     useEffect(() => {
@@ -19,14 +18,14 @@ const Catalogue = () => {
     if (loading){
         return (
             <h1>Loading..</h1>
-        )
+        ) 
     } else {
         return (
             <div className='dogCard_firstContainer'>
                 <div className='dogImage_container'>
                     {dogs.map((dog, index) => (
                         <div key={index} className='dogImage_wrapper dogCard' >
-                            <p>{dog.name} the {dog.breed}</p>
+                            <h3>{dog.name} the {dog.breed}</h3>
                             <Link className='dogImage dogCard' to={`${index}`}>
                                 <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name} />
                             </Link>

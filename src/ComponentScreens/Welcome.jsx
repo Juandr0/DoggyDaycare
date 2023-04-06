@@ -1,6 +1,4 @@
 import './CSS/welcome.css';
-import pawImage from '../paw.png';
-import Background from '../assets/Background.jpg';
 const Welcome = (props) => {
     const imageUrl = 'https://unsplash.com/photos/DZ3ixpNPt7c';
 return (

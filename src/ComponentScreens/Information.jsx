@@ -1,44 +1,48 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Apifetch from "../Components/Apifetch";
-import './CSS/information.css'
-import Fullstop from "../assets/full-stop.png"
+import './CSS/information.css';
 
 function Information() {
     const [dogAtDaycare, setDogAtDaycare] = useState();
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
-    let dogs = ([])
 
+    const dogs = Apifetch();
 
     useEffect(() => {
-        if (dogs[id].present) {
+        // When dogs data is available, set loading to false
+        if (dogs.length) {
+            setLoading(false)
+        }
+    }, [dogs]);
+
+    useEffect(() => {
+        // Check if the dog is present at daycare and set the state accordingly
+        if (dogs.length && dogs[id] && dogs[id].present) {
             setDogAtDaycare('atDaycare')
         } else {
             setDogAtDaycare('notAtDaycare')
         }
     }, [dogs, id]);
-
-    const cachedDogs = localStorage.getItem('dogs');
-    if (cachedDogs) {
-        dogs = cachedDogs;
-    } else {
-        dogs = Apifetch();
-    }
-    dogs = JSON.parse(dogs);
-
+    
 
 
     const ageCheck = (prop) => {
         if (prop > 1) {
             return 'years'
-        } else return 'year'
+        } 
+        return 'year'
     }
 
+    // Render loading state if the dogs data is not available yet
+    if (loading) {
+        return (
+            <h1>Loading</h1>
+        )
+    }
 
-
-
-
-
+    // Render dog information when the dogs data is available
     return (
         <div>
             <div className={`singleDogCard ${dogAtDaycare}`}>
@@ -48,18 +52,16 @@ function Information() {
 
                 <img src={dogs[id].img} />
                 <ul>
-                    <li> Chipnumber: {dogs[id].chipNumber}</li>
-                    
+                    <li id="chipNumber"> Chipnumber: {dogs[id].chipNumber}</li>
                 </ul>
                 <div className='singleDogCard_ownerInfo'>
-                    <h2>Owner</h2>
-                    <ul className="">
+                    <ul>
+                        <h2>Owner</h2>
                         <li>{dogs[id].owner.name} {dogs[id].owner.lastName}</li>
                         <li>{dogs[id].owner.phoneNumber}</li> <br />
                     </ul>
                 </div>
             </div>
-          
         </div>
     );
 }
