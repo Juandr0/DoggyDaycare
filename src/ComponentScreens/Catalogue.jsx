@@ -25,7 +25,7 @@ const Catalogue = () => {
                 <div className='dogImage_container'>
                     {dogs.map((dog, index) => (
                         <div key={index} className='dogImage_wrapper dogCard' >
-                            <p>{dog.name} the {dog.breed}</p>
+                            <h3>{dog.name} the {dog.breed}</h3>
                             <Link className='dogImage dogCard' to={`${index}`}>
                                 <img className={'dogImage dogCard ' + isDogPresentClass(dog)} src={dog.img} alt={dog.name} />
                             </Link>

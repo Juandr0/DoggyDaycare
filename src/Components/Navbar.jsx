@@ -1,7 +1,7 @@
 import './navbar.css';
 import '../App'
 import React, { useState } from "react";
-import pawImage from '../paw.png';
+import pawImage from '../assets/paw.png'
 import { Link } from "react-router-dom";
 
 
