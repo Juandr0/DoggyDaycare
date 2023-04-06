@@ -6,8 +6,7 @@ import Apifetch from '../Components/Apifetch';
 
 const Catalogue = () => {
 
-    const [loading, setLoading] = useState(false);
-
+    const [loading, setLoading] = useState(true);
     const dogs = Apifetch();
     
     useEffect(() => {
@@ -19,7 +18,7 @@ const Catalogue = () => {
     if (loading){
         return (
             <h1>Loading..</h1>
-        )
+        ) 
     } else {
         return (
             <div className='dogCard_firstContainer'>
